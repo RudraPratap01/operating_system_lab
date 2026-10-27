@@ -1,2 +1,3 @@
-# operating_system_lab
-# Operating System Lab  This repository contains programs and practical implementations related to Operating System concepts.  ## Topics Covered  - Process Management - CPU Scheduling - Synchronization - Deadlocks - Memory Management - File Management - Shell Scripting - Linux Commands  ## Language &amp; Tools  - C - Bash - Linux
+# Operating System Lab
+
+This repository contains my Operating System Lab programs and practical implementations. It covers various concepts of operating systems such as process management, CPU scheduling, process synchronization, deadlocks, memory management, file management, and shell scripting. The programs are mainly implemented using C and Bash and are practiced in a Linux environment. This repository is created to keep all my Operating System lab work organized and easily accessible.
