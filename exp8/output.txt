@@ -1,0 +1,59 @@
+==========================================
+CPU-bound process (PID 16771)
+==========================================
+16771:   /tmp/os-exp8.kV0CDi/cpu_bound
+Address           Kbytes     RSS   Dirty Mode  Mapping
+000055dea9696000       4       4       4 r---- cpu_bound
+000055dea9697000       4       4       4 r-x-- cpu_bound
+000055dea9698000       4       4       4 r---- cpu_bound
+000055dea9699000       4       4       4 r---- cpu_bound
+000055dea969a000       4       4       4 rw--- cpu_bound
+000055ded53bb000     136       8       8 rw---   [ anon ]
+00007f915fa00000     144     140       0 r---- libc.so.6
+00007f915fa24000    1516    1000       0 r-x-- libc.so.6
+00007f915fb9f000     472     148       0 r---- libc.so.6
+00007f915fc15000      16      16      16 r---- libc.so.6
+00007f915fc19000       8       8       8 rw--- libc.so.6
+00007f915fc1b000      32      20      20 rw---   [ anon ]
+00007f915fc62000       8       8       8 rw---   [ anon ]
+00007f915fc70000       4       4       4 r---- ld-linux-x86-64.so.2
+00007f915fc71000     160     160       0 r-x-- ld-linux-x86-64.so.2
+00007f915fc99000      44      44       0 r---- ld-linux-x86-64.so.2
+00007f915fca5000       8       8       8 r---- ld-linux-x86-64.so.2
+00007f915fca7000       8       8       8 rw--- ld-linux-x86-64.so.2
+00007fffa95be000     132      16      16 rw---   [ stack ]
+00007fffa95ff000      16       0       0 r----   [ anon ]
+00007fffa9603000       8       4       0 r-x--   [ anon ]
+ffffffffff600000       4       0       0 --x--   [ anon ]
+---------------- ------- ------- -------
+total kB            2720    1592     96
+
+==========================================
+I/O-bound process (PID 16772)
+==========================================
+16772:   /tmp/os-exp8.kV0CDi/io_bound
+Address           Kbytes     RSS   Dirty Mode  Mapping
+000055d7e5229000       4       4       4 r---- io_bound
+000055d7e522a000       4       4       4 r-x-- io_bound
+000055d7e522b000       4       4       4 r---- io_bound
+000055d7e522c000       4       4       4 r---- io_bound
+000055d7e522d000       4       4       4 rw--- io_bound
+000055d7e6341000     136       8       8 rw---   [ anon ]
+00007f8978600000     144     140       0 r---- libc.so.6
+00007f8978624000    1516    1000       0 r-x-- libc.so.6
+00007f897879f000     472     148       0 r---- libc.so.6
+00007f8978815000      16      16      16 r---- libc.so.6
+00007f8978819000       8       8       8 rw--- libc.so.6
+00007f897881b000      32      20      20 rw---   [ anon ]
+00007f8978862000       8       8       8 rw---   [ anon ]
+00007f8978870000       4       4       4 r---- ld-linux-x86-64.so.2
+00007f8978871000     160     160       0 r-x-- ld-linux-x86-64.so.2
+00007f8978899000      44      44       0 r---- ld-linux-x86-64.so.2
+00007f89788a5000       8       8       8 r---- ld-linux-x86-64.so.2
+00007f89788a7000       8       8       8 rw--- ld-linux-x86-64.so.2
+00007fffba439000     132      16      16 rw---   [ stack ]
+00007fffba5a7000      16       0       0 r----   [ anon ]
+00007fffba5ab000       8       4       0 r-x--   [ anon ]
+ffffffffff600000       4       0       0 --x--   [ anon ]
+---------------- ------- ------- -------
+total kB            2720    1592     96

@@ -1,39 +1,37 @@
-# Experiment 10 - Virtual Address Space of a Process
+# Experiment 10 — Observing Virtual Memory Addresses in C
 
-## Aim
-Observe that every process has its own virtual address space by printing the address of a variable.
-
-## Description
-The program stores a variable, prints its PID and virtual address, and then keeps running so you can inspect it. Running multiple instances lets you compare their addresses and memory maps.
-
-## Concepts Used
-- Virtual memory
-- `getpid()` and pointer printing with `%p`
-- `/proc/<pid>/maps`
-- ASLR
+**Aim:** To observe virtual memory address assignments across process runs and understand Address Space Layout Randomization (ASLR).
 
 ## Files
-- [`exp10.c`](exp10.c)
+
+| File | Language | Purpose |
+| --- | --- | --- |
+| `virtual_addr.c` | C | Prints process PID and virtual memory address of a stack variable |
+| `output.txt` | Text | Sample terminal execution output comparing ASLR states |
+
+## Commands & Concepts Covered
+
+- Virtual vs Physical memory addresses
+- Address Space Layout Randomization (ASLR)
+- Disabling ASLR using `setarch $(uname -m) -R`
+- Page tables and process memory isolation
 
 ## How to Run
-```bash
-gcc exp10.c -o exp10
-./exp10
-
-# In another terminal
-cat /proc/<PID>/maps
-
-# Run with ASLR disabled to compare addresses
-setarch $(uname -m) -R ./exp10
-```
-
-## Output
-Example (values will differ):
 
 ```bash
-PID: 5120 | Address: 0x7ffd3a2b4c5c
+gcc virtual_addr.c -o virtual_addr
+
+# Run with ASLR enabled (addresses change across runs)
+./virtual_addr &
+./virtual_addr &
+killall virtual_addr
+
+# Run with ASLR disabled (addresses remain identical across runs)
+setarch $(uname -m) -R ./virtual_addr &
+setarch $(uname -m) -R ./virtual_addr &
+killall virtual_addr
 ```
 
-## Notes
-- The printed address is a **virtual** address, not a physical one.
-- With ASLR enabled the address usually changes on every run.
+## Sample Output
+
+See [`output.txt`](output.txt) for verified terminal output.

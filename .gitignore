@@ -1,0 +1,24 @@
+# Compiled binaries, object files, and libraries
+*.o
+*.out
+*.exe
+
+# Executables generated from experiments
+exp5/string_ops
+exp6/memory
+exp7/cpu_bound
+exp7/io_bound
+exp9/fork_wait
+exp10/virtual_addr
+
+# Runtime temporary artifacts
+dummy.txt
+sample.txt
+TESTFILE.TXT
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/

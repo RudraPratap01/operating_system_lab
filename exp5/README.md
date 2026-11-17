@@ -1,39 +1,34 @@
-# Experiment 5 - String Length and Substring (Shell and C)
+# Experiment 5 — String Operations in Shell Script & C
 
-## Aim
-Find the length of a string and extract a substring from it, once in shell and once in C.
-
-## Description
-Both programs read a string, print its length, then ask for a starting position and a number of characters and print the substring. `exp5.sh` uses shell parameter expansion (`${#str}` and `${str:start:length}`); `exp5.c` counts characters manually and prints them in a loop.
-
-## Concepts Used
-- String length `${#str}`
-- Substring `${str:start:length}`
-- C strings, `fgets`, `scanf`
-- Manual length counting and loops in C
+**Aim:** To determine the length of a string and extract a substring using Bash parameter expansion and an equivalent C program.
 
 ## Files
-- [`exp5.sh`](exp5.sh)
-- [`exp5.c`](exp5.c)
+
+| File | Language | Purpose |
+| --- | --- | --- |
+| `string_ops.sh` | Bash | String length `${#str}` and substring extraction `${str:start:length}` |
+| `string_ops.c` | C | String length calculation and substring extraction using character array |
+| `output.txt` | Text | Sample terminal execution output |
+
+## Commands & Concepts Covered
+
+- Bash parameter expansion: `${#str}` and `${str:start:len}`
+- C character arrays and manual string traversal
+- `fgets()` for safe string input vs `scanf()`
+- Zero-based index calculations
 
 ## How to Run
-```bash
-# Shell version
-chmod +x exp5.sh
-./exp5.sh
-
-# C version
-gcc exp5.c -o exp5
-./exp5
-```
-
-## Output
-For the input `HelloWorld`, start `1`, length `5`:
 
 ```bash
-exp5.sh  ->  Substring: elloW
-exp5.c   ->  Substring: Hello
+# Run Bash script
+chmod +x string_ops.sh
+./string_ops.sh
+
+# Compile & run C program
+gcc string_ops.c -o string_ops
+./string_ops
 ```
 
-## Notes
-- The shell version uses **0-based** positions, while the C version uses **1-based** positions, so the same input gives different results.
+## Sample Output
+
+See [`output.txt`](output.txt) for verified terminal output.

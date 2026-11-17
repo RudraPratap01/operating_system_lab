@@ -1,0 +1,25 @@
+$ ./sed_demo.sh
+=== Original File Contents ===
+Line 1: Linux Operating System
+Line 2: Unix Shell Scripting
+Line 3: File Management and Processes
+Line 4: sed Stream Editor Tutorial
+Line 5: Operating System Laboratory
+
+=== sed Print: Printing Lines 2 to 4 ===
+Line 2: Unix Shell Scripting
+Line 3: File Management and Processes
+Line 4: sed Stream Editor Tutorial
+
+=== sed Substitute: Replace 'Operating System' with 'OS' ===
+Line 1: Linux OS
+Line 2: Unix Shell Scripting
+Line 3: File Management and Processes
+Line 4: sed Stream Editor Tutorial
+Line 5: OS Laboratory
+
+=== sed Delete: Deleting Lines containing 'Unix' ===
+Line 1: Linux Operating System
+Line 3: File Management and Processes
+Line 4: sed Stream Editor Tutorial
+Line 5: Operating System Laboratory

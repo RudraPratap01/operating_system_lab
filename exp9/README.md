@@ -1,32 +1,28 @@
-# Experiment 9 - Process Creation using fork() and wait()
+# Experiment 9 — Process Creation & Termination in C
 
-## Aim
-Demonstrate process creation with `fork()` and synchronisation between parent and child using `wait()`.
-
-## Description
-The program forks a child process. The child prints its PID, sleeps for 2 seconds and exits, while the parent waits for the child to terminate and then prints the terminated child's PID.
-
-## Concepts Used
-- `fork()`
-- `wait()`
-- `getpid()`
-- Parent-child relationship
+**Aim:** To create child processes using the `fork()` system call and manage synchronization using the `wait()` system call.
 
 ## Files
-- [`exp9.c`](exp9.c)
+
+| File | Language | Purpose |
+| --- | --- | --- |
+| `fork_wait.c` | C | Creates a child process with `fork()` and waits for completion with `wait()` |
+| `output.txt` | Text | Sample terminal execution output |
+
+## Commands & Concepts Covered
+
+- Process creation with `fork()`
+- Return value of `fork()`: `0` in child, child PID in parent, `< 0` on failure
+- Process synchronization using `wait(NULL)`
+- Process IDs (`getpid()`) and exit status
 
 ## How to Run
-```bash
-gcc exp9.c -o exp9
-./exp9
-```
-
-## Output
-Example (PIDs will differ):
 
 ```bash
-Parent Waiting for Child to terminate...
-Child Running with PID: 4321
-Child Exiting...
-Parent Terminated Child PID: 4321
+gcc fork_wait.c -o fork_wait
+./fork_wait
 ```
+
+## Sample Output
+
+See [`output.txt`](output.txt) for verified terminal output.
