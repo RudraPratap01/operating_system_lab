@@ -1,0 +1,30 @@
+$ gcc -Wall -Wextra cpu_bound.c -o cpu_bound
+$ gcc -Wall -Wextra io_bound.c -o io_bound
+
+=== CPU-Bound Task Output (First 10 cycles, stopped with timeout 5s) ===
+$ timeout 5s ./cpu_bound
+Starting CPU-bound workload (PID: 22104)...
+CPU task running: 100000000
+CPU task running: 200000000
+CPU task running: 300000000
+CPU task running: 400000000
+CPU task running: 500000000
+CPU task running: 600000000
+CPU task running: 700000000
+CPU task running: 800000000
+CPU task running: 900000000
+CPU task running: 1000000000
+...
+
+=== I/O-Bound Task Output (Sample 4 seconds, stopped with timeout 4s) ===
+$ timeout 4s ./io_bound
+Starting I/O-bound workload (PID: 22105)...
+File write completed
+File write completed
+File write completed
+File write completed
+
+=== top Comparison Analysis ===
+PID    USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+22104  rudra     20   0    2488    944    864 R  99.8   0.0   0:38.41 cpu_bound
+22105  rudra     20   0    2488    916    840 S   0.0   0.0   0:00.01 io_bound

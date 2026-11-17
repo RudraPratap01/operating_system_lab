@@ -1,0 +1,61 @@
+$ ./pmap_demo.sh
+
+==========================================
+CPU-bound process (PID 22890)
+==========================================
+22890:   /tmp/os-exp8.7wL81k/cpu_bound
+Address           Kbytes     RSS   Dirty Mode  Mapping
+000055c19e312000       4       4       4 r---- cpu_bound
+000055c19e313000       4       4       4 r-x-- cpu_bound
+000055c19e314000       4       4       4 r---- cpu_bound
+000055c19e315000       4       4       4 r---- cpu_bound
+000055c19e316000       4       4       4 rw--- cpu_bound
+000055c1bf405000     136       8       8 rw---   [ anon ]
+00007f35b2a00000     144     140       0 r---- libc.so.6
+00007f35b2a24000    1516    1004       0 r-x-- libc.so.6
+00007f35b2b9f000     472     148       0 r---- libc.so.6
+00007f35b2c15000      16      16      16 r---- libc.so.6
+00007f35b2c19000       8       8       8 rw--- libc.so.6
+00007f35b2c1b000      32      20      20 rw---   [ anon ]
+00007f35b2c62000       8       8       8 rw---   [ anon ]
+00007f35b2c70000       4       4       4 r---- ld-linux-x86-64.so.2
+00007f35b2c71000     160     160       0 r-x-- ld-linux-x86-64.so.2
+00007f35b2c99000      44      44       0 r---- ld-linux-x86-64.so.2
+00007f35b2ca5000       8       8       8 r---- ld-linux-x86-64.so.2
+00007f35b2ca7000       8       8       8 rw--- ld-linux-x86-64.so.2
+00007ffe3425b000     132      16      16 rw---   [ stack ]
+00007ffe343fd000      16       0       0 r----   [ anon ]
+00007ffe34401000       8       4       0 r-x--   [ anon ]
+ffffffffff600000       4       0       0 --x--   [ anon ]
+---------------- ------- ------- -------
+total kB            2720    1596      96
+
+==========================================
+I/O-bound process (PID 22891)
+==========================================
+22891:   /tmp/os-exp8.7wL81k/io_bound
+Address           Kbytes     RSS   Dirty Mode  Mapping
+000055e81d4a0000       4       4       4 r---- io_bound
+000055e81d4a1000       4       4       4 r-x-- io_bound
+000055e81d4a2000       4       4       4 r---- io_bound
+000055e81d4a3000       4       4       4 r---- io_bound
+000055e81d4a4000       4       4       4 rw--- io_bound
+000055e81e9b2000     136       8       8 rw---   [ anon ]
+00007f216b800000     144     140       0 r---- libc.so.6
+00007f216b824000    1516    1004       0 r-x-- libc.so.6
+00007f216b99f000     472     148       0 r---- libc.so.6
+00007f216ba15000      16      16      16 r---- libc.so.6
+00007f216ba19000       8       8       8 rw--- libc.so.6
+00007f216ba1b000      32      20      20 rw---   [ anon ]
+00007f216ba62000       8       8       8 rw---   [ anon ]
+00007f216ba70000       4       4       4 r---- ld-linux-x86-64.so.2
+00007f216ba71000     160     160       0 r-x-- ld-linux-x86-64.so.2
+00007f216ba99000      44      44       0 r---- ld-linux-x86-64.so.2
+00007f216baa5000       8       8       8 r---- ld-linux-x86-64.so.2
+00007f216baa7000       8       8       8 rw--- ld-linux-x86-64.so.2
+00007ffd12918000     132      16      16 rw---   [ stack ]
+00007ffd129ec000      16       0       0 r----   [ anon ]
+00007ffd129f0000       8       4       0 r-x--   [ anon ]
+ffffffffff600000       4       0       0 --x--   [ anon ]
+---------------- ------- ------- -------
+total kB            2720    1596      96

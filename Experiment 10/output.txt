@@ -1,0 +1,17 @@
+$ gcc -Wall -Wextra virtual_addr.c -o virtual_addr
+
+=== ASLR Enabled (Default Linux kernel behaviour) ===
+PID: 24101 | Virtual Address: 0x7fff38b91a24
+PID: 24102 | Virtual Address: 0x7ffd51ac9e54
+PID: 24103 | Virtual Address: 0x7ffe9013c714
+PID: 24104 | Virtual Address: 0x7ffcf2056384
+(Notice that virtual addresses change on each invocation due to address space layout randomization)
+
+=== ASLR Disabled (setarch $(uname -m) -R) ===
+PID: 24115 | Virtual Address: 0x7fffffffc864
+PID: 24116 | Virtual Address: 0x7fffffffc864
+PID: 24117 | Virtual Address: 0x7fffffffc864
+PID: 24118 | Virtual Address: 0x7fffffffc864
+(With ASLR disabled, stack addresses remain constant across multiple executions)
+
+# Running instances stopped using Ctrl+C or kill

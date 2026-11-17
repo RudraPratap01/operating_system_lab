@@ -1,0 +1,6 @@
+$ gcc -Wall -Wextra fork_wait.c -o fork_wait
+$ ./fork_wait
+Parent Process Waiting for Child [PID: 23412]...
+Child Process Active [PID: 23412, Parent PID: 23411]
+Child Process Finished [PID: 23412]
+Parent: Child process [PID: 23412] successfully terminated.

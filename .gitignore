@@ -1,22 +1,19 @@
-# Compiled binaries, object files, and libraries
+# Compiled binaries
+memory
+cpu_bound
+io_bound
+fork_wait
+virtual_addr
+virtual_addr_fixed
 *.o
-*.out
+a.out
 *.exe
 
-# Executables generated from experiments
-exp5/string_ops
-exp6/memory
-exp7/cpu_bound
-exp7/io_bound
-exp9/fork_wait
-exp10/virtual_addr
-
-# Runtime temporary artifacts
+# Generated / runtime temporary files
 dummy.txt
 sample.txt
-TESTFILE.TXT
 
-# Operating system and editor files
+# OS and Editor metadata
 .DS_Store
 Thumbs.db
 *.swp

@@ -1,0 +1,9 @@
+$ chmod +x check_type.sh
+$ ./check_type.sh /etc/passwd /var/log /no/such/path check_type.sh
+/etc/passwd is a regular file.
+/var/log is a directory.
+/no/such/path does not exist.
+check_type.sh is a regular file.
+
+$ ./check_type.sh
+Usage: ./check_type.sh <file/directory> ...

@@ -1,0 +1,15 @@
+$ chmod +x string_ops.sh
+$ ./string_ops.sh
+Enter a String: OperatingSystem
+Length of String: 15
+Enter starting position: 9
+Enter number of characters: 6
+Substring: System
+
+$ gcc -Wall -Wextra string_ops.c -o string_ops
+$ ./string_ops
+Enter a String: OperatingSystem
+Length of string: 15
+Enter starting position (0-based): 9
+Enter number of characters: 6
+Substring: System

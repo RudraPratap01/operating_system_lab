@@ -1,0 +1,27 @@
+$ ./working_users.sh
+Currently working users are
+
+ 10:25:01 up  3:14,  2 users,  load average: 0.15, 0.12, 0.08
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+rudra    pts/1    192.168.1.12     08:45    0.00s  0.18s  0.03s w
+
+Enter Username: rudra
+Login time: 08:45
+Total working time: 1 hours 40 minutes
+
+$ ./line_range.sh /etc/passwd 1 4
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+
+$ cat test.txt
+operating systems
+unix shell scripting
+database management
+operating systems lab
+$ ./delete_word.sh operating test.txt
+Deleted lines containing 'operating' from test.txt
+$ cat test.txt
+unix shell scripting
+database management

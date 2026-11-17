@@ -1,0 +1,13 @@
+$ gcc -Wall -Wextra memory.c -o memory
+$ ./memory 256
+256 MB memory allocated and mapped into physical RAM.
+Process PID: 21498 | Running... Press Ctrl+C to terminate.
+
+# In another terminal window:
+$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           15.5Gi       3.4Gi       9.8Gi       184Mi       2.3Gi      11.7Gi
+Swap:           4.0Gi          0B       4.0Gi
+
+# Terminated after testing using Ctrl+C (SIGINT)
+^C
