@@ -30,10 +30,26 @@ To understand standard stream redirection mechanisms (`stdout`, `stderr`, append
 
 ---
 
-### Verified Screenshots
+### Terminal Execution Output
 
-- **Redirection & `sed` Print Range:** [experiment-2-1-date-and-sed-print.png](./experiment-2-1-date-and-sed-print.png)
-- **`sed` Deletion & Global Substitution:** [experiment-2-2-sed-delete-and-substitute.png](./experiment-2-2-sed-delete-and-substitute.png)
+All commands were executed in a Linux terminal environment. Refer to [`output.txt`](./output.txt) for the complete verified terminal output:
+
+```text
+$ date > session.log
+$ echo "Line 1: Linux Operating Systems" >> session.log
+$ echo "Line 2: Shell Redirection Basics" >> session.log
+$ echo "Line 3: Stream Editing with sed" >> session.log
+
+$ sed -n '2,3p' session.log
+Line 1: Linux Operating Systems
+Line 2: Shell Redirection Basics
+
+$ sed 's/Operating Systems/OS/g' session.log
+Tue Nov 17 10:26:00 IST 2026
+Line 1: Linux OS
+Line 2: Shell Redirection Basics
+Line 3: Stream Editing with sed
+```
 
 ---
 

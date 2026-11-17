@@ -26,7 +26,7 @@ This repository contains practical implementations and verified execution result
 Each experiment folder is self-contained with:
 - An experiment-specific **`README.md`** describing the theoretical background, syntax, and commands.
 - Clean **source code** (`.sh` shell scripts and `.c` programs).
-- Verified execution **`output.txt`** traces and terminal screenshots where applicable.
+- Verified execution **`output.txt`** terminal run traces.
 
 ---
 
@@ -34,10 +34,10 @@ Each experiment folder is self-contained with:
 
 | # | Experiment Name | Core Topics & System Calls | Files | Link |
 |:---:|:---|:---|:---|:---:|
-| **01** | Linux System Administration & Process Management | Filesystem navigation, system status, `ps`, `kill`, `nice`, `top` | `*.png`, `README.md` | [Experiment 01](./Experiment%2001/) |
-| **02** | Shell Redirection & Stream Editing with `sed` | `>`, `>>`, `2>`, line range printing (`p`), deletion (`d`), regex substitution (`s`) | `*.png`, `README.md` | [Experiment 02](./Experiment%2002/) |
+| **01** | Linux System Administration & Process Management | Filesystem navigation, system status, `ps`, `kill`, `nice`, `top` | `output.txt`, `README.md` | [Experiment 01](./Experiment%2001/) |
+| **02** | Shell Redirection & Stream Editing with `sed` | `>`, `>>`, `2>`, line range printing (`p`), deletion (`d`), regex substitution (`s`) | `output.txt`, `README.md` | [Experiment 02](./Experiment%2002/) |
 | **03** | Bash Scripting: Conditionals & Loops | Positional parameters (`$#`, `$@`), `for` loop, file test operators (`-f`, `-d`) | `check_type.sh`, `output.txt` | [Experiment 03](./Experiment%2003/) |
-| **04** | User Session Tracking & Text Processing | `w`, `awk`, epoch timestamp calculations (`date +%s`), in-place deletion (`sed -i`) | `working_users.sh`, `line_range.sh`, `delete_word.sh` | [Experiment 04](./Experiment%2004/) |
+| **04** | User Session Tracking & Text Processing | `w`, `awk`, epoch timestamp calculations (`date +%s`), in-place deletion (`sed -i`) | `working_users.sh`, `line_range.sh`, `delete_word.sh`, `output.txt` | [Experiment 04](./Experiment%2004/) |
 | **05** | String Operations in Shell Script & C | Bash parameter expansion (`${#str}`, `${str:start:len}`), C character arrays | `string_ops.sh`, `string_ops.c`, `output.txt` | [Experiment 05](./Experiment%2005/) |
 | **06** | Memory Allocation & Demand Paging in C | Dynamic heap allocation (`malloc`), 4 KB page touching, `free -h` | `memory.c`, `output.txt` | [Experiment 06](./Experiment%2006/) |
 | **07** | CPU-Bound vs I/O-Bound C Programs | CPU compute loop vs disk writes + sleep, process states (`R` vs `S`), `top` | `cpu_bound.c`, `io_bound.c`, `output.txt` | [Experiment 07](./Experiment%2007/) |
@@ -52,14 +52,10 @@ Each experiment folder is self-contained with:
 ```text
 operating_system_lab/
 ├── Experiment 01/
-│   ├── experiment-1-1-jobs-and-kill.png
-│   ├── experiment-1-2-ps-process-list.png
-│   ├── experiment-1-3-command-history.png
-│   ├── experiment-1-4-ls-and-tree.png
+│   ├── output.txt
 │   └── README.md
 ├── Experiment 02/
-│   ├── experiment-2-1-date-and-sed-print.png
-│   ├── experiment-2-2-sed-delete-and-substitute.png
+│   ├── output.txt
 │   └── README.md
 ├── Experiment 03/
 │   ├── check_type.sh

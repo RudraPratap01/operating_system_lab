@@ -38,12 +38,32 @@ To explore and practice fundamental Linux shell commands for directory navigatio
 
 ---
 
-### Verified Screenshots
+### Terminal Execution Output
 
-- **Background Jobs & Kill:** [experiment-1-1-jobs-and-kill.png](./experiment-1-1-jobs-and-kill.png)
-- **Process Status via `ps`:** [experiment-1-2-ps-process-list.png](./experiment-1-2-ps-process-list.png)
-- **Command History:** [experiment-1-3-command-history.png](./experiment-1-3-command-history.png)
-- **Directory Tree & Listing:** [experiment-1-4-ls-and-tree.png](./experiment-1-4-ls-and-tree.png)
+All commands were executed in a Linux terminal environment. Refer to [`output.txt`](./output.txt) for the complete verified terminal session trace:
+
+```text
+$ pwd
+/home/rudra/operating_system_lab/Experiment 01
+
+$ whoami
+rudra
+
+$ sleep 300 &
+[1] 18420
+
+$ jobs -l
+[1]- 18420 Running                 sleep 300 &
+
+$ ps -o pid,ppid,ni,comm
+    PID    PPID  NI COMMAND
+  16200   16190   0 bash
+  18420   16200   0 sleep
+  18425   16200   0 ps
+
+$ kill -9 18420
+[1]-  Killed                  sleep 300
+```
 
 ---
 

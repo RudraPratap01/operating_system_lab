@@ -1,0 +1,64 @@
+$ pwd
+/home/rudra/operating_system_lab/Experiment 01
+
+$ whoami
+rudra
+
+$ ls -la
+total 20
+drwxr-xr-x 2 rudra rudra 4096 Nov 17 10:25 .
+drwxr-xr-x 12 rudra rudra 4096 Nov 17 10:25 ..
+-rw-r--r-- 1 rudra rudra 2150 Nov 17 10:25 README.md
+-rw-r--r-- 1 rudra rudra 1850 Nov 17 10:25 output.txt
+
+$ tree
+.
+├── output.txt
+└── README.md
+
+0 directories, 2 files
+
+$ mkdir lab_test && cd lab_test
+$ touch notes.txt
+$ echo "Linux Operating Systems Lab" > notes.txt
+$ cat notes.txt
+Linux Operating Systems Lab
+$ cd .. && rm -rf lab_test
+
+$ sleep 300 &
+[1] 18420
+
+$ sleep 500 &
+[2] 18421
+
+$ jobs -l
+[1]- 18420 Running                 sleep 300 &
+[2]+ 18421 Running                 sleep 500 &
+
+$ ps -o pid,ppid,ni,comm
+    PID    PPID  NI COMMAND
+  16200   16190   0 bash
+  18420   16200   0 sleep
+  18421   16200   0 sleep
+  18425   16200   0 ps
+
+$ kill -9 18420
+[1]-  Killed                  sleep 300
+
+$ kill %2
+[2]+  Terminated              sleep 500
+
+$ jobs
+(no active background jobs)
+
+$ history | tail -n 10
+ 101  pwd
+ 102  whoami
+ 103  ls -la
+ 104  tree
+ 105  sleep 300 &
+ 106  sleep 500 &
+ 107  jobs -l
+ 108  ps -o pid,ppid,ni,comm
+ 109  kill -9 18420
+ 110  kill %2

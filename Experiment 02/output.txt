@@ -1,0 +1,47 @@
+$ date > session.log
+$ cat session.log
+Tue Nov 17 10:26:00 IST 2026
+
+$ echo "Line 1: Linux Operating Systems" >> session.log
+$ echo "Line 2: Shell Redirection Basics" >> session.log
+$ echo "Line 3: Stream Editing with sed" >> session.log
+$ echo "Line 4: Process Management and Memory" >> session.log
+$ echo "Line 5: Virtual Memory and Paging" >> session.log
+
+$ cat session.log
+Tue Nov 17 10:26:00 IST 2026
+Line 1: Linux Operating Systems
+Line 2: Shell Redirection Basics
+Line 3: Stream Editing with sed
+Line 4: Process Management and Memory
+Line 5: Virtual Memory and Paging
+
+=== Standard Error Redirection (2>) ===
+$ ls /nonexistent_directory 2> error.log
+$ cat error.log
+ls: cannot access '/nonexistent_directory': No such file or directory
+
+=== sed Print Line Range (Lines 2 to 4) ===
+$ sed -n '2,4p' session.log
+Line 1: Linux Operating Systems
+Line 2: Shell Redirection Basics
+Line 3: Stream Editing with sed
+
+=== sed Delete Matching Lines (Delete lines containing 'Shell') ===
+$ sed '/Shell/d' session.log
+Tue Nov 17 10:26:00 IST 2026
+Line 1: Linux Operating Systems
+Line 3: Stream Editing with sed
+Line 4: Process Management and Memory
+Line 5: Virtual Memory and Paging
+
+=== sed Global Pattern Substitution (Replace 'Operating Systems' with 'OS') ===
+$ sed 's/Operating Systems/OS/g' session.log
+Tue Nov 17 10:26:00 IST 2026
+Line 1: Linux OS
+Line 2: Shell Redirection Basics
+Line 3: Stream Editing with sed
+Line 4: Process Management and Memory
+Line 5: Virtual Memory and Paging
+
+$ rm -f session.log error.log
