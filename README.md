@@ -14,8 +14,8 @@
 - **GitHub:** [@RudraPratap01](https://github.com/RudraPratap01)
 - **Repository:** [operating_system_lab](https://github.com/RudraPratap01/operating_system_lab)
 - **Course:** Operating Systems Laboratory
-- **Roll Number:** *(Fill in Roll Number)*
-- **College / Department:** *(Fill in College / University)*
+- **Roll Number:** 2025A6r030
+- **College / Department:** MIET CSE(Ai/Ml)
 
 ---
 
@@ -126,6 +126,3 @@ gcc -Wall -Wextra fork_wait.c -o fork_wait
 
 ---
 
-## References & Acknowledgements
-
-- Adapted with reference from [Divyashish Singh's Operating System Codes](https://github.com/divyashishsingh211-max/Operating_System_Codes) and Harshit Singh Jamwal's Operating System Lab repository.
