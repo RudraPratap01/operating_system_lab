@@ -7,3 +7,4 @@ check_type.sh is a regular file.
 
 $ ./check_type.sh
 Usage: ./check_type.sh <file/directory> ...
+

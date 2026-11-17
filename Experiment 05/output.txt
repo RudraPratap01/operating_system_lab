@@ -13,3 +13,4 @@ Length of string: 15
 Enter starting position (0-based): 9
 Enter number of characters: 6
 Substring: System
+

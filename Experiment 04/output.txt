@@ -25,3 +25,4 @@ Deleted lines containing 'operating' from test.txt
 $ cat test.txt
 unix shell scripting
 database management
+
